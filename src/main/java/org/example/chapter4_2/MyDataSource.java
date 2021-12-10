@@ -1,4 +1,4 @@
-package org.example.chapter4_3;
+package org.example.chapter4_2;
 
 import org.apache.flink.streaming.api.functions.source.SourceFunction;
 
