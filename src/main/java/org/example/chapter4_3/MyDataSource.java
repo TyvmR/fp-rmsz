@@ -1,4 +1,4 @@
-package org.example.udsource;
+package org.example.chapter4_3;
 
 import org.apache.flink.streaming.api.functions.source.SourceFunction;
 

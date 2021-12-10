@@ -16,9 +16,13 @@
  * limitations under the License.
  */
 
-package org.example;
+package org.example.chapter4_2;
 
+import org.apache.flink.api.common.functions.MapFunction;
 import org.apache.flink.api.java.ExecutionEnvironment;
+
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Skeleton for a Flink Batch Job.
@@ -34,7 +38,15 @@ public class BatchJob {
 
 	public static void main(String[] args) throws Exception {
 		// set up the batch execution environment
+		final List<Integer>        integers = Arrays.asList(5, 6, 7, 8);
 		final ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
+			env.fromCollection(integers).map(new MapFunction<Integer, Integer>() {
+				@Override
+				public Integer map(Integer value) throws Exception {
+					return value + 1;
+				}
+			}).print();
+
 
 		/*
 		 * Here, you can start creating your execution plan for Flink.
@@ -61,6 +73,6 @@ public class BatchJob {
 		 */
 
 		// execute program
-		env.execute("Flink Batch Java API Skeleton");
+		//env.execute("Flink Batch Java API Skeleton");
 	}
 }
