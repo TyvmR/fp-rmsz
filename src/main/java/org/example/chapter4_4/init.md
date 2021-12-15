@@ -8,3 +8,5 @@
 #### 5.处理类型
 #### 6.TypeInformation
 #### 7.认识javaApi的类型信息
+
+> flink的类型信息
