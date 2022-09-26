@@ -17,8 +17,6 @@ import org.apache.flink.util.Collector;
 public class BatchDemoV1 {
 
 
-
-
     public static void main(String[] args) throws Exception {
         ExecutionEnvironment executionEnvironment = ExecutionEnvironment.getExecutionEnvironment();
         DataSet<String> stringDataSource = executionEnvironment.fromElements("Flink batch demo", "batch demo", "demo");
