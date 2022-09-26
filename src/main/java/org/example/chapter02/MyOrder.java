@@ -8,12 +8,15 @@ package org.example.chapter02;
 public class MyOrder {
 
 
+
     public Long id;
     public String product;
     public int amount;
     public MyOrder (){
 
     }
+
+
 
     public MyOrder(Long id, String product, int amount) {
         this.id = id;
