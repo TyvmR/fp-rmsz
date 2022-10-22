@@ -1,10 +1,12 @@
 package org.example.chapter_5;
 
+import static org.apache.flink.api.java.aggregation.Aggregations.MIN;
+import static org.apache.flink.api.java.aggregation.Aggregations.SUM;
+
 import org.apache.flink.api.common.functions.MapPartitionFunction;
 import org.apache.flink.api.common.functions.ReduceFunction;
 import org.apache.flink.api.common.operators.Order;
 import org.apache.flink.api.java.ExecutionEnvironment;
-import org.apache.flink.api.java.aggregation.Aggregations;
 import org.apache.flink.api.java.functions.KeySelector;
 import org.apache.flink.api.java.operators.AggregateOperator;
 import org.apache.flink.api.java.operators.DataSource;
@@ -12,9 +14,6 @@ import org.apache.flink.api.java.operators.GroupReduceOperator;
 import org.apache.flink.api.java.tuple.Tuple2;
 import org.apache.flink.api.java.tuple.Tuple3;
 import org.apache.flink.util.Collector;
-
-import static org.apache.flink.api.java.aggregation.Aggregations.MIN;
-import static org.apache.flink.api.java.aggregation.Aggregations.SUM;
 
 
 /**

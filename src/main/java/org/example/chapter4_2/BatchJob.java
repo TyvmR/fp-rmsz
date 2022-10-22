@@ -18,11 +18,11 @@
 
 package org.example.chapter4_2;
 
-import org.apache.flink.api.common.functions.MapFunction;
-import org.apache.flink.api.java.ExecutionEnvironment;
-
 import java.util.Arrays;
 import java.util.List;
+
+import org.apache.flink.api.common.functions.MapFunction;
+import org.apache.flink.api.java.ExecutionEnvironment;
 
 /**
  * Skeleton for a Flink Batch Job.

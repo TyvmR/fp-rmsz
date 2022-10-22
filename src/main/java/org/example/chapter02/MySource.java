@@ -1,10 +1,10 @@
 package org.example.chapter02;
 
-import org.apache.flink.streaming.api.functions.source.SourceFunction;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+
+import org.apache.flink.streaming.api.functions.source.SourceFunction;
 
 /**
  * @Author: john

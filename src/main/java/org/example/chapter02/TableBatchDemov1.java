@@ -1,11 +1,11 @@
 package org.example.chapter02;
 
+import static org.apache.flink.table.api.Expressions.$;
+
 import org.apache.flink.api.java.DataSet;
 import org.apache.flink.api.java.ExecutionEnvironment;
 import org.apache.flink.table.api.Table;
 import org.apache.flink.table.api.bridge.java.BatchTableEnvironment;
-
-import static org.apache.flink.table.api.Expressions.$;
 
 /**
  * @Author: john

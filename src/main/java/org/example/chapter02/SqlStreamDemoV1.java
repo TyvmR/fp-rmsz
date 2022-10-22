@@ -1,12 +1,12 @@
 package org.example.chapter02;
 
+import static org.apache.flink.table.api.Expressions.$;
+
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.table.api.Table;
 import org.apache.flink.table.api.bridge.java.StreamTableEnvironment;
 import org.apache.flink.types.Row;
-
-import static org.apache.flink.table.api.Expressions.$;
 
 public class SqlStreamDemoV1 {
 
