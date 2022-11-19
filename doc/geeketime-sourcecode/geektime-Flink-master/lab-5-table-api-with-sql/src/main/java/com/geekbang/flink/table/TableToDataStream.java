@@ -17,9 +17,7 @@ import java.util.concurrent.TimeUnit;
 public class TableToDataStream {
     public static void main(String args[]) {
         ParameterTool params = ParameterTool.fromArgs(args);
-
         String outputPath = params.get("outputPath", "data/tmp/output");
-
         StreamExecutionEnvironment sEnv = StreamExecutionEnvironment.getExecutionEnvironment();
         sEnv.setRestartStrategy(RestartStrategies.fixedDelayRestart(
                 3,
@@ -28,17 +26,10 @@ public class TableToDataStream {
         sEnv.setStreamTimeCharacteristic(TimeCharacteristic.EventTime);
         sEnv.enableCheckpointing(4000);
         sEnv.getConfig().setAutoWatermarkInterval(1000);
-
         StreamTableEnvironment tEnv = StreamTableEnvironment.create(sEnv);
-
         tEnv.registerTableSource("table", new GeneratorTableSource(10, 100, 60, 0));
-
         Table table = tEnv.scan("table");
-
         DataStream<Row> appendStream = tEnv.toAppendStream(table, Row.class);
-
         appendStream.print();
-
-
     }
 }
