@@ -1,3 +1,0 @@
-FROM harbor.xxx.cn/flink/flink:1.12.0-20210625
-RUN mkdir -p $FLINK_HOME/usrlib
-COPY ./examples/streaming/StateMachineExample.jar $FLINK_HOME/usrlib/
