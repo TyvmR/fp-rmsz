@@ -1,10 +1,12 @@
-package org.example.metric;
+package org.example.metric.prmetheus;
 
 import org.apache.flink.configuration.Configuration;
 import org.apache.flink.configuration.RestOptions;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.api.functions.sink.DiscardingSink;
+import org.example.metric.MetricsMapFunc;
+import org.example.metric.RandomSourceFunc;
 
 /**
  * @Author: john

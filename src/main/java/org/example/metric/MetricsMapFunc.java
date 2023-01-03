@@ -21,19 +21,16 @@ public class MetricsMapFunc extends RichMapFunction<Integer, Integer> {
 
     @Override
     public void open(Configuration parameters) throws Exception {
-        eventCounter = getRuntimeContext().getMetricGroup().counter("events");
+        eventCounter = getRuntimeContext().getMetricGroup().addGroup("john_test1_counter").counter("events");
         valueHistogram =
                 getRuntimeContext()
-                        .getMetricGroup()
+                        .getMetricGroup().addGroup("john_test1_histogram")
                         .histogram("value_histogram", new DescriptiveStatisticsHistogram(10));
     }
 
     @Override
     public Integer map(Integer value) throws Exception {
         eventCounter.inc();
-        if(eventCounter.getCount() > 100){
-            throw new RuntimeException();
-        }
         valueHistogram.update(value);
         return value;
     }
