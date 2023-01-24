@@ -21,9 +21,9 @@ public class DbUtil {
         for (Entity entity : all) {
             JSONObject eneityDb = JSONUtil.parseObj(entity.getStr("store_conf_json"));
 
-            if (Objects.isNull(eneityDb.getStr("engine"))){
-                eneityDb.set("engine","MergeTree");
-                Db.use().execute("update biz_data_store set store_conf_json = ? where id = ?",eneityDb.toString(),entity.getLong("id"));
+            if (Objects.isNull(eneityDb.getStr("engine"))) {
+                eneityDb.set("engine", "MergeTree");
+                Db.use().execute("update biz_data_store set store_conf_json = ? where id = ?", eneityDb.toString(), entity.getLong("id"));
             }
         }
         System.out.println(JSONUtil.toJsonPrettyStr(all));
