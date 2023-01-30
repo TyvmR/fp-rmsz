@@ -19,6 +19,7 @@
 package org.sql;
 
 import io.prometheus.client.Collector;
+import io.prometheus.client.Collector;
 import io.prometheus.client.CollectorRegistry;
 import org.apache.flink.annotation.PublicEvolving;
 import org.apache.flink.annotation.VisibleForTesting;

@@ -1,6 +1,5 @@
 package org.sql;
 
-import javax.ws.rs.core.Configurable;
 
 import org.apache.flink.configuration.ConfigOption;
 import org.apache.flink.configuration.ConfigOptions;
