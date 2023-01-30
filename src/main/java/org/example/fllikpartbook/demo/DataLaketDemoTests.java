@@ -1,4 +1,4 @@
-package com.cloudwise.dodp.datalake.flink.constants;
+package org.example.fllikpartbook.demo;
 
 import cn.hutool.core.util.StrUtil;
 import org.apache.flink.streaming.api.environment.LocalStreamEnvironment;
