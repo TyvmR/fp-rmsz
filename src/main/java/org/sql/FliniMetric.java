@@ -1,7 +1,6 @@
 package org.sql;
 
 
-import org.apache.flink.configuration.ConfigOption;
 import org.apache.flink.configuration.ConfigOptions;
 import org.apache.flink.configuration.Configuration;
 import org.apache.flink.configuration.RestOptions;
@@ -11,7 +10,7 @@ import org.apache.flink.table.api.EnvironmentSettings;
 import org.apache.flink.table.api.Table;
 import org.apache.flink.table.api.bridge.java.StreamTableEnvironment;
 
-public class FlinkSqlWithKafka {
+public class FliniMetric {
 
 	@SuppressWarnings("deprecation")
 	public static void main(String[] args) throws Exception {
