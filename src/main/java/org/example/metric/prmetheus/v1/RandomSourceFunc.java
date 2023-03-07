@@ -1,4 +1,4 @@
-package org.example.metric;
+package org.example.metric.prmetheus.v1;
 
 import org.apache.flink.streaming.api.functions.source.SourceFunction;
 

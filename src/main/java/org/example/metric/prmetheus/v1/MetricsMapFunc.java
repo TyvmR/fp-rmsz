@@ -1,4 +1,4 @@
-package org.example.metric;
+package org.example.metric.prmetheus.v1;
 
 import org.apache.flink.api.common.functions.RichMapFunction;
 import org.apache.flink.configuration.Configuration;
@@ -9,7 +9,7 @@ import org.apache.flink.runtime.metrics.DescriptiveStatisticsHistogram;
 /**
  * @Author: john
  * @Date: 2022-11-23-15:05
- * @Description:
+ * @Description: 自定义增加的指标
  */
 public class MetricsMapFunc extends RichMapFunction<Integer, Integer> {
 
